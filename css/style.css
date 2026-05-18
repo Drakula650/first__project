@@ -1,0 +1,757 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('/fonts/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('/fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/TTLakes-Bold.woff') format('woff'),
+        url('/fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('/fonts/TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+        url('/fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/TTLakes-Medium.woff') format('woff'),
+        url('/fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('/fonts/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('/fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/TTLakes-Regular.woff') format('woff'),
+        url('/fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --base-color: #FF3E79;
+    --black-color: #1B1C21;
+    --divider-color: #EAEAEA;
+    --text-menu-color: #7E7E82;
+    --main-color: #F8F8F8;
+    --blue-divider-color: #41F6D7;
+    --border-color-main-btn: #B8FFEC;
+    --header-color: #FFFFFF;
+    --transition-duration: .3s;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 14px;
+    font-family: "TT Lakes", Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    color: var(--black-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+/*Кнопка*/
+.header__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--base-color);
+    border: none;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.header__btn:focus-visible {
+    outline: 1px solid var(--base-color);
+    outline-offset: 2px;
+}
+
+.header__btn:hover {
+    transform: scale(1.03);
+}
+
+.header__btn:active {
+    transform: scale(0.97);
+}
+
+/*Серая разделительная полоска*/
+ .header__divider {
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    background-color: var(--divider-color);
+}
+
+/* header */
+
+.header {
+    margin: 0;
+    background-color: var(--header-color);
+}
+
+/* header container */
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0 16px;
+    height: 88px;
+}
+
+/* Левая часть шапки */
+
+.header__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16.73px;
+}
+
+/* Правая часть шапки */
+
+.header__right {
+    display: block;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Правая часть шапки в мобильной версии 320px-768px */
+
+.header__right--mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+}
+
+/* Правая часть шапки в планшетной версии 768px-1120px */
+
+.header__right--tablet {
+    display: none;
+}
+
+/* Левая часть правой части шапки */
+
+.header__right--left-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    column-gap: 16px;
+}
+
+/* В середине находится дивидер */
+
+/* Правая часть правой части header */ 
+
+.header__right--right-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    column-gap: 16px;
+}
+
+/* Контейнер с заголоком для десктопной версии */
+
+.header__container--title-desctop {
+    display: none;
+}
+
+/* main */
+
+.main {
+    margin: 0;
+    padding-top: 24px;
+    padding-bottom: 35px;
+    background-color: var(--main-color);
+}
+
+.main__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Дивидер заголовка */
+
+.main__divider {
+    width: 4px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: var(--blue-divider-color);
+}
+
+/* контейнер заголовка */
+
+.main__container-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+}
+
+/* Сам заголовок */
+
+.main__title {
+    font-family: "TT Lakes", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: -0.6px;
+}
+
+/* Контейнер заголовка для мобильной версии */
+
+.main__container-title--mobile {
+    column-gap: 12px;
+}
+
+.main__container-btn {
+    display: none;
+}
+
+/* Навигация (кастомные кнопки) */
+
+.main__nav {
+    margin: 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 16px;
+    padding: 0;
+}
+
+/* Список */
+
+.main__ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    list-style-type: none;
+    height: 40px;
+    column-gap: 4px;
+}
+
+/* Элементы списка */
+
+.main__li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Первый элемент списка */
+
+.main__li:first-child {
+    margin-left: 2px;
+}
+
+/* Последний элемент списка */
+
+.main__li:last-child {
+    margin-right: 2px;
+}
+
+/* Кастомная кнопка */
+
+.main__btn-custom {
+    margin: 0;
+    padding: 6px 14.56px;
+    font-family: "TT Lakes", Arial, sans-serif;
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-menu-color);
+    background-color: var(--main-color);
+    letter-spacing: -0.2px;
+    cursor: pointer;
+    transition: transform .3s;
+    border-radius: 6px;
+    border: none;
+}
+
+
+.main__btn-custom:focus-visible {
+    outline: 2px solid var(--border-color-main-btn);
+    background-color: white;
+}
+
+.main__btn-custom:hover {
+    outline: 2px solid var(--border-color-main-btn);
+    background-color: white;
+    transform: scale(1);
+}
+
+.main__btn-custom:active {
+    outline: 2px solid var(--border-color-main-btn);
+    outline-offset: 2px;
+    background-color: white;
+    transform: scale(0.95);
+}
+
+/* Секция с текстом и фотографией */
+
+.main__section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Контейнер с текстом и читать далее*/
+
+.main__text-container {
+    margin: 0 16px 16px 16px;
+}
+
+/* Контейнер с текстом */
+
+.main__block-text {
+    line-height: 18px;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+
+/* Первый параграф */
+
+.main__first-paragraf {
+    margin-top: 0;
+}
+
+.main__paragraf {
+    margin-bottom: 16px;
+}
+
+/* Чекбокс для иконки и  читать далее */
+
+.main__read-more--label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color:  var(--black-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Контейнер для иконки "читать далее" */
+
+.main__img-container--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+}
+
+/* Изменение иконки "читать далее" */
+
+.main__arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.main__read-more--checkbox:checked ~ .main__read-more--label .main__arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Чекбокс "читать далее" */
+
+.main__read-more--label::after {
+    content: "Читать далее";
+    font-size: 16px;
+    font-family: "TT Lakes", Arial, sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+/* Чекбокс "Скрыть" */
+
+.main__read-more--checkbox:checked ~ .main__read-more--label::after {
+    content: "Скрыть";
+    font-size: 16px;
+    font-family: "TT Lakes", Arial, sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+/* В мобильной версии скрываем: */
+
+.main__full-text,
+.main__second-paragraf--tablet,
+.main__second-paragraf--desctop,
+.main__read-more--checkbox,
+.main__read-more--checkbox:checked ~ .main__block-text .main__second-paragraf--tablet {
+    display: none;
+}
+
+/* В мобильной версии показываем: */
+
+.main__block-text,
+.main__read-more--checkbox:checked ~ .main__block-text .main__full-text {
+    display: block;
+}
+
+/* Контейнер с изображением */
+
+.main__img-conatainer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Изображение */
+
+.main__img-picture  {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 450px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+
+    /* Шапка - header */
+
+    .header__container {
+        margin: 0 24px;
+    }
+
+    /* Левая часть шапки (header) */
+
+    .header__left {
+        column-gap: 20px;
+    }
+
+    /* правая часть шапки мобильной версии */
+
+    .header__right--mobile {
+        display: none;
+    }
+
+    /* левый ливидер в планшетной версии */
+
+    .header__divider--tablet--left {
+        order: 1;
+    }
+
+    /* Логотип в шапке */
+
+    .header__logo--mobile {
+        order: 2;
+    }
+
+    /* правая часть шапки для планшетной версии */
+
+    .header__right--tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    /* main */
+
+    .main {
+        padding-bottom: 40px;
+    }
+
+    /* Секция с заголовком */
+
+    .main__header {
+        display: block;
+    }
+
+    /* Контейнер заголовка для планшетной верси */
+
+    .main__container-title--tablet {
+        column-gap: 20px;
+    }
+
+    /* Навигация (кастомные кнопки) */
+
+    .main__nav {
+        margin: 0;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 24px;
+        margin: 0;
+    }
+
+    /* Секция с текстом и фотографией */
+
+    .main__section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        padding: 0 24px;
+        margin: 0;
+        column-gap: 48px;
+    }
+
+    /* В планшетной версии скрываем: */
+
+    .main__full-text {
+        display: none;
+    }
+
+    /* В планшетной версии показываем то что будет перед нажатием на чекбокс */
+
+    .main__block-text .main__second-paragraf--tablet {
+        display: block;
+    }
+
+    /* Контейнер с текстом и читать далее*/
+
+    .main__text-container {
+        min-width: 312px;
+        margin: 0;
+        flex: 1;
+    }
+
+    /* Контейнер с текстом */
+
+    .main__block-text {
+        line-height: 20px;
+    }
+
+    /* Сдвигаем чекбокс выше на 10 пикселей */
+
+    .main__read-more--label {
+        position: relative;
+        top: -10px;
+    }
+
+
+    /* Контейнер с изображением */
+
+    .main__img-conatainer {
+        min-width: 360px;
+        min-height: 208px;
+        max-width: none;
+        flex: 1;
+    }
+
+    /* Изображение */
+
+    .main__img-picture {
+        min-width: 360px;
+        min-height: 208px;
+        max-width: none;
+    }
+}
+
+
+@media (min-width: 1120px) {
+
+    /* Шапка header*/
+
+    header {
+        display: none;
+    }
+
+    /* main */
+
+    .main {
+        padding-top: 42px;
+        padding-bottom: 49px;
+    }
+
+    /* Cекция с заголовком и кнопками */
+
+    .main__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Контейнер с дивидером и заголовком */
+    
+     .main__container-title--desctop {
+        column-gap: 30px;
+    }
+
+    /* Дивидер */
+
+    .main__divider--desctop {
+        width: 3px;
+    }
+
+    /* Контейнер с кнопками */
+
+    .main__container-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 32px;
+        padding-right: 32px;
+    }
+
+    /* Rонтейнер для изобржения кнопки */
+
+    .main__img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: var(--base-color);
+        border: none;
+        cursor: pointer;
+        transition: transform .3s;
+    }
+
+    /* Сама копка */
+
+    .main__btn {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 8px;
+        border: none;
+        background-color: var(--main-color);
+        transition: transform .3s;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main__btn:focus-visible {
+        outline: none;
+        transform: scale(1.04);
+    }
+
+    .main__btn:hover {
+        transform: scale(1.04);
+    }
+
+    .main__btn:active {
+        transform: scale(0.97);
+    }
+
+    /* Навигация (кастомные кнопки) */
+
+    .main__nav {
+        margin: 0;
+        padding-top: 8px;
+        padding-bottom: 7px;
+        padding-left: 32px;
+        margin: 0;
+    }
+
+    /* Список десктопной версии */
+
+    .main__ul--desctop {
+        flex-wrap: wrap;
+        height: 82px;
+        row-gap: 2px;                /* могу увеличить отступ между строками */
+        overflow-x: visible;
+    }
+
+    /* Кастомная кнопка для десктопной версии */
+
+    .main__btn-custom--desctop {
+        padding: 6px 20px;
+    }
+
+    /* В десктопной версии скрываем: */
+
+    .main__full-text,
+    .main__block-text .main__second-paragraf--tablet,
+    .main__read-more--checkbox:checked ~ .main__block-text .main__first-full-paragraf {
+        display: none;
+    }
+
+    /* В десктопной версии поазываем: */
+
+    .main__block-text .main__first-paragraf, 
+    .main__block-text .main__second-paragraf--desctop {
+        display: block;
+    }
+
+    /* Секция с текстом и фотографией */
+
+    .main__section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        padding-left: 35px;
+        padding-right: 28.65px;
+        margin: 0;
+        column-gap: 36px;
+    }
+
+    /* Контейнер с текстом и читать далее*/
+
+    .main__text-container {
+        margin: 0;
+        margin-top: 5px;
+        min-width: 490.0px;
+        flex: 1;
+    }
+
+    /* Контейнер с текстом */
+
+    .main__block-text {
+        line-height: 20px;
+    }
+
+
+    /* Контейнер с изображением */
+
+    .main__img-conatainer {
+        min-width: 531.35px;
+        min-height: 307px;
+        max-width: none;
+        flex: 1;
+    }
+
+    /* Изображение */
+
+    .main__img-picture {
+        min-width: 531.35px;
+        min-height: 307px;
+        max-width: none;
+    }
+}

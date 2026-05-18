@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__left header__left--mobile header__left--tablet header__left--desctop">
+                <button class="header__btn header__btn--burger-mobile">
+                    <img class="header__img-bnt" src="/images/burger-menu.svg" alt="Бургер-меню">
+                </button>
+                <img class="header__logo header__logo--mobile" src="/images/logo.svg" alt="Логотип">
+                <div class="header__divider header__divider--tablet--left"></div>
+            </div>
+            <div class="header__right">
+                <div class="header__right--mobile">
+                    <button class="header__btn header__btn--service-mobile">
+                        <img class="header__img-bnt" src="/images/service.svg" alt="Настройки">
+                    </button>
+                    <button class="header__btn header__btn--cheked-mobile">
+                        <img class="header__img-bnt" src="/images/checked.svg" alt="Спросить">
+                    </button>      
+                </div>
+                <div class="header__right--tablet">
+                    <div class="header__right--left-block">
+                        <button class="header__btn header__btn--call">
+                            <img class="header__img-bnt" src="/images/call.svg" alt="Позвонить">
+                        </button>
+                        <button class="header__btn header__btn--chat">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0H2C0.9 0 0.01 0.9 0.01 2L0 20L4 15H18C19.1 15 20 14.1 20 13V2C20 0.9 19.1 0 18 0ZM11 11H5C4.45 11 4 10.55 4 10C4 9.45 4.45 9 5 9H11C11.55 9 12 9.45 12 10C12 10.55 11.55 11 11 11ZM15 6H5C4.45 6 4 5.55 4 5C4 4.45 4.45 4 5 4H15C15.55 4 16 4.45 16 5C16 5.55 15.55 6 15 6Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <button class="header__btn header__btn--profile">
+                            <img class="header__img-bnt" src="/images/profile.svg" alt="Профиль">
+                        </button>
+                    </div>
+                    <div class="header__divider header__divider--tablet--right"></div>
+                    <div class="header__right--right-block">
+                        <button class="header__btn header__btn--service-tablet">
+                        <img class="header__img-bnt" src="/images/service.svg" alt="Настройки">
+                        </button>
+                        <button class="header__btn header__btn--cheked-tablet">
+                            <img class="header__img-bnt" src="/images/checked.svg" alt="Спросить">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <main class="main">
+        <section class="main__header">
+            <div class="main__container-title main__container-title--mobile main__container-title--tablet main__container-title--desctop">
+                <div class="main__divider main__divider--mobile main__divider--tablet main__divider--desctop"></div>
+                <h2 class="main__title">Услуги и сервисы</h2>
+            </div>
+            <div class="main__container-btn main__container-btn--mobile main__container-btn--tablet main__container-btn--desctop">
+                <button class="main__btn">
+                    <span class="main__text-btn">Оставить заявку</span>
+                    <div class="main__img-container">
+                        <img class="main__img-btn" src="/images/service.svg" alt="Сервис">
+                    </div>
+                </button>
+                <button class="main__btn">
+                    <span class="main__text-btn">Статус ремонта</span>
+                    <div class="main__img-container">
+                        <img class="main__img-btn" src="/images/checked.svg" alt="Спросить">
+                    </div>
+                </button>
+            </div>
+        </section>
+        <nav class="main__nav">
+            <ul class="main__ul main__ul--tablet main__ul--desctop">
+                <li class="main__li main__li--tablet main__li--desctop">
+                    <button class="main__btn-custom main__btn-custom--tablet main__btn-custom--desctop">
+                        Ремонтируемые устройства
+                    </button>
+                </li>
+                <li class="main__li main__li--tablet main__li--desctop">
+                    <button class="main__btn-custom main__btn-custom--tablet main__btn-custom--desctop">
+                        Дополнительные услуги
+                    </button>
+                </li>
+                <li class="main__li main__li--tablet main__li--desctop">
+                    <button class="main__btn-custom main__btn-custom--tablet main__btn-custom--desctop">
+                        Цены на услуги
+                    </button>
+                </li>
+                <li class="main__li main__li--tablet main__li--desctop">
+                    <button class="main__btn-custom main__btn-custom--tablet main__btn-custom--desctop">
+                        Специальные цены
+                    </button>
+                </li>
+                <li class="main__li main__li--tablet main__li--desctop">
+                    <button class="main__btn-custom main__btn-custom--tablet main__btn-custom--desctop">
+                        Адреса сервисных центров
+                    </button>
+                </li>
+                <li class="main__li main__li--tablet main__li--desctop">
+                    <button class="main__btn-custom main__btn-custom--tablet main__btn-custom--desctop">
+                        Отзывы
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <section class="main__section">
+            <div class="main__text-container">
+                <input type="checkbox" id="toggle" class="main__read-more--checkbox">
+                <div class="main__block-text">
+                    <p class="main__first-paragraf main__paragraf">
+                        Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                    </p>
+                    <p class="main__second-paragraf--tablet main__paragraf">
+                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+                    </p>
+                    <p class="main__second-paragraf--desctop main__paragraf">
+                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                    </p>
+                    <div class="main__full-text">
+                        <p class="main__first-full-paragraf main__paragraf">
+                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                        </p>
+                        <p class="main__second-full-paragraf main__paragraf">Спасибо за внимание</p>
+                    </div>
+                </div>
+                <label for="toggle" class="main__read-more--label">
+                    <div class="main__img-container--icon">
+                        <img src="/images/icon.svg" alt="" class="main__arrow-icon">
+                    </div>
+                </label>
+            </div>
+            <div class="main__img-conatainer">
+                <img class="main__img-picture" src="/images/Picture Copy.jpg" alt="фото логотипа на стене">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
